@@ -1,2 +1,18 @@
-<p>detalle works!</p>
+<button>
+    <mat-icon [routerLink]="['/menu']">home</mat-icon>
+</button>
+<mat-grid-list cols="2" rowHeight="2:1" *ngFor="let detalle of paisDetalle">
+    <mat-grid-tile>
+        <img  src="{{detalle.bandera}}" >
+    </mat-grid-tile>
+    <mat-grid-tile class="detallePais">
+        <div>
+            <p>Nombre del Pais: {{detalle.nombrePais}}<br></p>
+        </div>
+        <div>
+            <p>Nombre nativo: {{detalle.nombreNativo}}</p>
+        </div>
+        
+    </mat-grid-tile>
+</mat-grid-list>
 <pre>{{paisDetalle | json}}</pre> 

@@ -11,7 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
-
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     HttpClientModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
