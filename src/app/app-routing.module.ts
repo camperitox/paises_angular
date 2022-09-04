@@ -19,7 +19,7 @@ const routes: Routes = [
         component: MenuComponent,
       },
       {
-        path: 'detalle',
+        path: 'detalle/:codigo',
         component: DetalleComponent,
       }
     ]

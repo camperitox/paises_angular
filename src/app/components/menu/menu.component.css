@@ -1,0 +1,11 @@
+.example-card {
+    width: 100px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left:20px;
+    background-color: hsla(209, 23%, 22%);
+}
+
+.example-header-image {
+    background-size:cover;
+}
