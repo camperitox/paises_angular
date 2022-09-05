@@ -27,7 +27,7 @@ export class DetalleComponent implements OnInit {
         this.paisDetalle = resultado.map((pais:any) => {
           let moneda=Object.entries(pais.currencies).map(([key,value])=> {return (value as any)['name']});
           let nombreNativo=Object.entries(pais.name.nativeName).map(([key,value])=> {return (value as any)['official']});
-          console.log(moneda);
+          let lenguas=Object.entries(pais.languages)
           return {
             codigoPais:pais.ccn3,
             nombrePais: pais.name.common,
@@ -37,12 +37,11 @@ export class DetalleComponent implements OnInit {
             subregion:pais.subregion,
             capital:pais.capital,
             moneda:moneda,
-            lenguas:pais.languages,
+            lenguas:lenguas,
             fronteras:pais.borders,
             bandera:pais.flags.png
           }
         });
-        console.log(this.paisDetalle);
         
       },
       error: (error) => {

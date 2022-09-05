@@ -33,7 +33,5 @@ $paises_angular-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($paises_angular-theme);
 
-.div {
-  background-color: hsl(207, 26%, 17%);
-}
+
 

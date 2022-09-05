@@ -1,18 +1,26 @@
-<button mat-mini-fab color="primary">
+<button mat-icon-button color="primary">
     <mat-icon [routerLink]="['/menu']">home</mat-icon>
 </button>
-<mat-grid-list cols="2" rowHeight="2:1" *ngFor="let detalle of paisDetalle">
-    <mat-grid-tile>
-        <img  src="{{detalle.bandera}}" >
-    </mat-grid-tile>
-    <mat-grid-tile class="detallePais">
-        <div>
-            <p>Nombre del Pais: {{detalle.nombrePais}}<br></p>
-        </div>
-        <div>
-            <p>Nombre nativo: {{detalle.nombreNativo}}</p>
-        </div>
+<table *ngFor="let detalle of paisDetalle">
+    <tr>
+        <td class="imagenBandera">
+            <img src="{{detalle.bandera}}"> 
+        </td>
+        <td class="detallePais">
         
-    </mat-grid-tile>
-</mat-grid-list>
-<pre>{{paisDetalle | json}}</pre> 
+            <p>Nombre del Pais: {{detalle.nombrePais}}<br></p>
+            <p>Nombre nativo: {{detalle.nombreNativo}}</p>
+            <p>Población: {{detalle.poblacion}}</p>
+            <p>Región: {{detalle.region}}</p>
+            <p>Subregión: {{detalle.subregion}}</p>
+            <p>Capital: {{detalle.capital}}</p>
+            <p>Moneda: {{detalle.moneda}}</p>
+            <p>Lenguas: {{detalle.lenguas}}</p>
+        
+            <a *ngFor="let frontera of detalle.fronteras">
+                <button mat-raised-button style="margin-left: 15px; color:hsla(209, 23%, 22%);">{{frontera}}</button>
+            </a>
+        </td>
+    </tr>
+</table>
+<!-- <pre>{{paisDetalle | json}}</pre> -->

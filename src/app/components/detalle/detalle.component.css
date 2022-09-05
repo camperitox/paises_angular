@@ -1,7 +1,16 @@
-.mat-grid-tile img{
-    text-align: center;
-    border-radius: 0.375rem;
-}
+
 .detallePais{
     color: #fff;
+    margin-left: 25px;
+    
+}
+table{
+    margin-left: 200px;
+}
+table td{
+    width: 400px;
+}
+.table td img{
+    text-align:end;
+    border-radius: 50%;
 }
