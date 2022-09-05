@@ -1,4 +1,19 @@
-<mat-card class="example-card" *ngFor="let pais of paisesList">
+<mat-form-field  appearance="legacy"  style="width: 30%;">
+    <mat-label style="color:white">País</mat-label>
+    <input (keyup)="filtro(buscador.value)" [formControl]="buscadorPais" style="color:white" matInput placeholder="Buscar país..." #buscador>
+  </mat-form-field>
+<br>
+<mat-form-field appearance="outline">
+    <mat-label>Region</mat-label>
+    <mat-select [formControl]="selectPais" (selectionChange)="filtroPorRegion(region.value)" #region>
+        <mat-option [value]="null">--</mat-option>
+      <mat-option *ngFor="let reg of regiones" [value]="reg">
+        {{reg}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<br>
+<mat-card class="example-card" *ngFor="let pais of paisesFiltrados">
     <a style="text-decoration:none" [routerLink]="['/detalle',pais.codigoPais]">
         <img mat-card-image src="{{pais.bandera}}" >
         <mat-card-content>
